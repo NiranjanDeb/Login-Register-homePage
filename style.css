@@ -1,0 +1,163 @@
+/* Basic styling for the login and registration page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.main{
+    background-color: #00000089;
+    background-image:linear-gradient(rgba(7, 14, 25, 0.8),rgba(0, 13, 28, 0.8)) , url(./BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header{
+    color:#ffff;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 9;
+}
+.header .logo{
+    padding: 20px 50px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.header .nav{
+    padding: 20px 50px;
+    font-weight: 300;
+}
+.header .nav ul{
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+ul a{
+    color:#fff ;
+    text-decoration: none;
+    position: relative;
+}
+
+ul a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right ;
+}
+
+ul a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.form-container {
+    background:transparent;
+    border: 2px solid rgba(161, 213, 255, 0.5);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 00, 0.856);
+    width: 350px;
+    transition: transform 0.6s ease-in-out;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    top: -18%;
+    left: 5px;
+    color: #9e9e9e;
+    display: block;
+    margin:2px 0;
+    position: absolute;
+    font-size: .8em;
+}
+.icon{
+    top:13px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+}
+
+
+.input-group input {
+    color: #e9e8e8;
+    font-weight: 200;
+    background: transparent;
+    width: 98%;
+    padding: 15px 0px 5px 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ddd;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004c9d;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1680f2;
+}
+
+.switch-form {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.switch-form a {
+    color: #9dc1e8;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Hide and show forms based on active state */
+.form {
+    display: none;
+}
+
+.active-form {
+    transition: .5s ease;
+    display: block;
+}
